@@ -13,9 +13,8 @@ if st.button('classify'):
         vect = cv.transform(data).toarray()
         pred = model.predict(vect)
         if pred[0] == 0:
-            st.write('This email is not spam')
             st.success('Email is not spam')
         else:
-            st.write('This email is spam')
+            st.success('Email is spam')
     else:
         print('Please type Email')
